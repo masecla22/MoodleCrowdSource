@@ -9,6 +9,7 @@
 // @grant GM_setValue
 // @grant GM_getValue
 // @grant GM_setClipboard
+// @grant GM.xmlHttpRequest
 // @grant unsafeWindow
 // @grant window.close
 // @grant window.focus

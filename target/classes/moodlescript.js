@@ -1,1 +1,1 @@
-alert(name);
+alert(name+" something else");
