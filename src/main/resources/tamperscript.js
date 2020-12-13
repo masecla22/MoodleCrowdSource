@@ -22,18 +22,19 @@
 
 
 
-
-
-
-
-
+	// Decide source for downloading script.
 	var devMode = true;
 	var url = "https://raw.githubusercontent.com/masecla22/MoodleCrowdSource/main/src/main/resources/moodlescript.js";
-	if(devMode)
+	if (devMode)
 		url = "http://localhost:12345/source";
-	// Download script and evaluate
-	$.get(url, (data) => {
-		eval(data);
+
+	// Download script and execute
+	GM.xmlHttpRequest({
+		method: "GET",
+		url: url,
+		onload: function(response){
+			eval(response.responseText);
+		}
 	});
-	name=name;
+	name = name;
 })();
