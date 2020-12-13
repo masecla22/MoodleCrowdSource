@@ -3,6 +3,7 @@ package masecla.moodleserver.server;
 import java.io.IOException;
 
 import masecla.mamp.classes.Website;
+import masecla.moodleserver.endpoints.SourceServer;
 
 public class MoodlePanel {
 	private Website website;
@@ -23,6 +24,6 @@ public class MoodlePanel {
 	}
 
 	public void runMappings() {
-
+		this.website.map("/source", new SourceServer());
 	}
 }

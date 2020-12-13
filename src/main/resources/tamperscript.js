@@ -20,8 +20,20 @@
 
 	var name = "YOURNAME";
 
+
+
+
+
+
+
+
+	var devMode = true;
+	var url = "https://raw.githubusercontent.com/masecla22/MoodleCrowdSource/main/src/main/resources/moodlescript.js";
+	if(devMode)
+		url = "http://localhost:12345/source";
 	// Download script and evaluate
-	$.get("https://raw.githubusercontent.com/masecla22/MoodleCrowdSource/main/src/main/resources/moodlescript.js", (data) => {
+	$.get(url, (data) => {
 		eval(data);
 	});
+	name=name;
 })();
