@@ -21,7 +21,7 @@
 	var name = "YOURNAME";
 
 	// Download script and evaluate
-	$.get("URL TO BE APPLIED", (data) => {
+	$.get("https://raw.githubusercontent.com/masecla22/MoodleCrowdSource/main/src/main/resources/moodlescript.js", (data) => {
 		eval(data);
 	});
 })();
