@@ -12,7 +12,7 @@ import org.json.simple.parser.ParseException;
 
 @SuppressWarnings("unchecked")
 public class AnswerManager {
-	private JSONObject answers;
+	private JSONObject answers = new JSONObject();
 	private File toUse;
 
 	public AnswerManager(File toUse) {
