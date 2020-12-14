@@ -18,6 +18,7 @@ public class AnswerManager {
 	public AnswerManager(File toUse) {
 		super();
 		this.toUse = toUse;
+		fromFile();
 	}
 
 	public void fromFile() {
@@ -61,6 +62,7 @@ public class AnswerManager {
 
 	public void addAnswerFor(String user, String question, String answer) {
 		JSONObject obj = (JSONObject) this.answers.getOrDefault(user, new JSONObject());
+		System.out.println("Setting response fro "+user);
 		obj.put(question, answer);
 		this.answers.put(user, obj);
 		this.saveToFile();

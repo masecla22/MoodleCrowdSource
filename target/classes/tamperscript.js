@@ -20,8 +20,7 @@
 	'use strict';
 
 	var name = "Mattia";
-
-
+	
 
 	// Decide source for downloading script.
 	var devMode = true;

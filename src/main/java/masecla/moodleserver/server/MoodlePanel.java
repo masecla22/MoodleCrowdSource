@@ -5,6 +5,7 @@ import java.io.IOException;
 
 import masecla.mamp.classes.Website;
 import masecla.moodleserver.database.AnswerManager;
+import masecla.moodleserver.endpoints.Authorize;
 import masecla.moodleserver.endpoints.GetAnswers;
 import masecla.moodleserver.endpoints.SetAnswer;
 import masecla.moodleserver.endpoints.SourceServer;
@@ -34,5 +35,6 @@ public class MoodlePanel {
 		this.website.map("/source", new SourceServer());
 		this.website.map("/set", new SetAnswer(manager));
 		this.website.map("/get", new GetAnswers(manager));
+		this.website.map("/check", new Authorize());
 	}
 }

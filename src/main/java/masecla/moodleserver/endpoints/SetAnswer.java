@@ -1,5 +1,7 @@
 package masecla.moodleserver.endpoints;
 
+import java.util.Base64;
+
 import masecla.mamp.classes.MAMPEngine;
 import masecla.mamp.classes.Request;
 import masecla.mamp.classes.UserClient;
@@ -22,6 +24,8 @@ public class SetAnswer extends Webpage {
 		String answer = arg3.getParameters().get("answer");
 		String author = arg3.getParameters().get("author");
 		this.manager.addAnswerFor(author, question, answer);
+		System.out.println("Got a response from " + author + " for the question "
+				+ new String(Base64.getDecoder().decode(question)).substring(0, 10) + "...");
 		return "OK";
 	}
 
